@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase de git</title>
 </head>
+
 <body>
-    
+    <section>
+        <h1>Pasos para usar git</h1>
+        <ul>
+            <li> <span>git config --global user.name "nombre" </span></li><!--Configura nombre de usuario-->
+            <li> <span>git config --global user.email email</span></li> <!--Configura el email-->
+        </ul>
+        <h2>Iniciando git</h2>
+        <ul>
+            <li><span>git init</span></li><!--Inicia un repositorio de git en nuestro proyecto, esto se hace 1 sola vez por proyecto-->
+            <li><span>git add .</span></li><!--Podemos usar el "." para guardar todos los archivos creados u modificados, o guardar archivo por archivo con su nombre-->
+            <li><span>git commit -m "titulo del commit, mientras mas detalles haya de lo que hice mejor"</span></li>
+            <li><span>git status</span></li><!--Verifica en que estado estamos y además para saber si tengo elementos para guardar y hacer commit-->
+            <li><span>git log</span></li><!--Muestra una lista de los commits realizados-->
+        </ul>
+        <h3>Trabajando con ramas</h3>
+        <ul>
+            <li><span>git branch</span></li><!--Con este comando veo el listado de ramas creadas-->
+            <li><span>git branch nombre-rama</span></li>
+            <li><span>git checkout nombre-rama</span></li><!--Con este comando me cambio de rama-->
+            <li><span>git merge nombre-rama</span></li><!--Fusiono mis ramas, en caso de haber algun conflicto puedo elegir que cambios quiero hacer y que descartar o ignorar// Debo estar parado en la rama en la cual deseo traer los cambios de la rama externa o secundaria (si quiero traer cambios de rama 2 a main, tengo que estar parado en main)-->
+        <h4>Trabajando de forma remota con github</h4>
+            <li><span>git remote add origin url-repositorio</span></li><!--conecta mi repo local al repositorio de github online-->
+            <li><span>git remote -v</span></li><!--me muestra la url del repositorio local en github-->
+            <li><span>git push -u origin main</span></li><!--empuja los cambios de mi repo local al repo de github, el origin main puede ser reemplazado por el nombre de la rama que queramos pushear. Ejemplo git push -u origin otra-rama-->
+        </ul>
+    </section>
+
 </body>
+
 </html>
